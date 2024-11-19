@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="header">
+            <h1 id="title">Survey Form</h1>
+            <p id="description"><i>Please fill the following membership form to help us with our statistics</i></p>
+        </div>
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="john.doe@gmail.com">
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Age:</label>
+                <input type="number" id="number" name="age" required min="10" max="100" placeholder="25">
+            </div>
+            <div class="form-group">
+                <label for="message">What are your thoughts?</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+            <div class="form-group">
+                <label for="dropdown">Current Degree:</label>
+                <select id="dropdown" name="degree">
+                    <option value="">Select current degree</option>
+                    <option value="undergraduate">Under Graduate</option>
+                    <option value="graduate">Graduate</option>
+                    <option value="bachelor">Bachelor</option>
+                    <option value="masters">Masters</option>
+                    <option value="phd">PhD</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="skills">Skills:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="csharp" name="skills" value="C#">
+                    <label for="csharp">C#</label>
+                    <input type="checkbox" id="java" name="skills" value="Java">
+                    <label for="java">Java</label>
+                    <input type="checkbox" id="python" name="skills" value="Python">
+                    <label for="python">Python</label>
+                    <input type="checkbox" id="rust" name="skills" value="Rust">
+                    <label for="rust">Rust</label>
+                    <input type="checkbox" id="angular" name="skills" value="Angular">
+                    <label for="angular">Angular</label>
+                    <input type="checkbox" id="react" name="skills" value="React">
+                    <label for="react">React</label>
+                    <input type="checkbox" id="nodejs" name="skills" value="Nodejs">
+                    <label for="nodejs">NodeJS</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button id="submit" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
