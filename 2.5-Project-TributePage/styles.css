@@ -11,10 +11,6 @@ body {
     background-color: #fff;
     padding: 0 20px;
     background-color: #232222;
-    /* background-image: url(background-image.png);
-    background-size: cover;
-    background-position: center;
-    backdrop-filter: blur(1px); */
 }
 
 header {
@@ -65,7 +61,6 @@ figure {
 }
 
 .timeline ul {
-    /* list-style: none; */
     padding: 20px 0;
     max-width: 600px;
     margin: auto;
@@ -75,7 +70,6 @@ figure {
 .timeline li {
     margin: 10px 0;
     padding-left: 10px;
-    /* border-left: 3px solid #333; */
 }
 
 .timeline strong {
