@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Technical Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <h1>CSS Docs</h1>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#syntax">Syntax</a></li>
+                <li><a href="#selectors">Selectors</a></li>
+                <li><a href="#variables">Variables</a></li>
+                <li><a href="#box-model">Box Model</a></li>
+                <li><a href="#flexbox">Flexbox</a></li>
+                <li><a href="#grid-layout">Grid Layout</a></li>
+                <li><a href="#positioning">Positioning</a></li>
+                <li><a href="#animations">Animations</a></li>
+                <li><a href="#media-queries">Media Queries</a></li>
+            </ul>
+        </nav>
+        <main class="content">
+            <header>
+                <h1>CSS Technical Documentation</h1>
+                <p>Welcome to the ultimate guide to CSS! Learn everything about how CSS to enhance your web designs.
+                </p>
+            </header>
+            <section id="introduction">
+                <h2>Introduction</h2>
+                <div class="section-content">
+                    <p>CSS, short for Cascading Style Sheets, is a cornerstone technology of the web. It is used to
+                        style
+                        HTML documents and provides control over the layout, color, typography, and overall appearance
+                        of
+                        web pages.</p>
+                    <p>CSS is designed to separate content (HTML) from presentation, allowing developers to apply
+                        consistent
+                        styles across multiple pages easily.</p>
+                </div>
+            </section>
+            <section id="syntax">
+                <h2>CSS Syntax</h2>
+                <div class="section-content">
+                    <p>CSS is structured with rulesets. Each ruleset consists of a **selector** and a **declaration
+                        block**:
+                    </p>
+                    <pre>
+selector {
+    property: value;
+    property: value;
+}                   </pre>
+                    <p>For example:</p>
+                    <pre>
+h1 {
+    color: blue;
+    font-size: 20px;
+}                   </pre>
+                </div>
+            </section>
+            <section id="selectors">
+                <h2>Selectors</h2>
+                <div class="section-content">
+                    <p>Selectors are used to target HTML elements for styling. Types of selectors include:</p>
+                    <ul>
+                        <li><strong>Universal Selector</strong>: Targets all elements (e.g., <code>* {}</code>).</li>
+                        <li><strong>Type Selector</strong>: Targets specific elements (e.g., <code>h1</code>,
+                            <code>p</code>).
+                        </li>
+                        <li><strong>Class Selector</strong>: Targets elements with a specific class (e.g.,
+                            <code>.classname</code>).
+                        </li>
+                        <li><strong>ID Selector</strong>: Targets a specific element with an ID (e.g.,
+                            <code>#idname</code>).
+                        </li>
+                        <li><strong>Pseudo Selector</strong>: Targets a special state of an element. (e.g.
+                            <code>:hover</code> applies style when an element is hovered over and
+                            <code>:nth-child(n)</code> targets the nth child of an element).
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="variables">
+                <h2>CSS Variables</h2>
+                <div class="section-content">
+                    <p>CSS Variables allow developers to define reusable values in their stylesheets.</p>
+                    <p>For example, a variable is defined like that:</p>
+                    <pre>
+:root {
+    --main-color: #3498db;
+    --padding-size: 10px;
+}                   </pre>
+                    <p>And called like that:</p>
+                    <pre>
+div {
+    color: var(--main-color);
+    padding: var(--padding-size);
+}                    </pre>
+                </div>
+            </section>
+            <section id="box-model">
+                <h2>Box Model</h2>
+                <div class="section-content">
+                    <p>The box model describes how elements are wrapped with content, padding, borders, and margins:</p>
+                    <ul>
+                        <li><strong>Content</strong>: Holds the element’s text or child elements. The size can be
+                            controlled with properties like <code>width</code> and <code>height</code>.</li>
+                        <li><strong>Padding</strong>: Adds space inside the element between the content and border. Use
+                            properties like <code>padding</code> or individual padding sides.
+                        </li>
+                        <li><strong>Border</strong>: Encases the content and padding, styled using properties like
+                            <code>border</code>, <code>border-width</code>, <code>border-color</code>, and
+                            <code>border-radius</code>.
+                        </li>
+                        <li><strong>Margin</strong>: Adds space outside the element, separating it from neighboring
+                            elements. Control it with properties like <code>margin</code> or individual margin sides.
+                        </li>
+                    </ul>
+                    <img src="box-model.png" alt="CSS Box Model" class="box-model-image">
+                </div>
+            </section>
+            <section id="flexbox">
+                <h2>Flexbox</h2>
+                <div class="section-content">
+                    <p>Flexbox is a CSS layout model designed for flexible and efficient arrangement of items within a
+                        container, even when their size is unknown or dynamic.</p>
+                    <p>Key FlexBox Properties:</p>
+                    <ol>
+                        <li><strong>Container Properties</strong>:
+                            <ul>
+                                <li><strong>display</strong>: Set to <code>flex</code> or <code>inline-flex</code> to
+                                    enable flex context.
+                                </li>
+                                <li><strong>flex-direction</strong>: Determines the direction of the main axis:
+                                    <ul>
+                                        <li><code>row</code> (default): Items are placed from left to right.</li>
+                                        <li><code>row-reverse</code>: Items are placed from right to left.</li>
+                                        <li><code>column</code>: Items are placed from top to bottom.</li>
+                                        <li><code>column-reverse</code> Items are placed from bottom to top.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>justify-content</strong>: Aligns items along the main axis:
+                                    <ul>
+                                        <li><code>flex-start</code> (default): Items are packed at the start.</li>
+                                        <li><code>flex-end</code>: Items are packed at the end.</li>
+                                        <li><code>center</code>: Items are centered.</li>
+                                        <li><code>space-between</code>: Items have equal space between them.</li>
+                                        <li><code>space-around</code>: Items have equal space around them.</li>
+                                        <li><code>space-evenly</code>: Items have equal space distributed.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>align-items</strong>: Aligns items along the cross axis:
+                                    <ul>
+                                        <li><code>stretch</code> (default): Items stretch to fill the container.</li>
+                                        <li><code>flex-start</code>: Items are aligned at the start of the cross axis.
+                                        </li>
+                                        <li><code>flex-end</code>: Items are aligned at the end.</li>
+                                        <li><code>center</code>: Items are centered.</li>
+                                        <li><code>baseline</code>: Items align based on their text's baseline.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>align-content</strong>: Aligns a flex container's lines when there are
+                                    multiple lines. Works similarly to <code>justify-content</code>, but applies to
+                                    cross-axis lines.</li>
+                            </ul>
+                        </li>
+                        <li class="no-margin-bottom"><strong>Item Properties</strong>:
+                            <ul>
+                                <li><strong>order</strong>: Controls the order of items. Default is <code>0</code>.
+                                    Lower values are placed first.</li>
+                                <li><strong>flex-grow</strong>: Determines how much an item will grow relative to
+                                    others. (e.g. If two items have <code>flex-grow: 1</code> and
+                                    <code>flex-grow: 2</code>, the second item will take twice as much space).
+                                </li>
+                                <li><strong>flex-shrink</strong>: Specifies how items shrink relative to others when
+                                    space is limited. (e.g. <code>flex-shrink: 0</code> prevents shrinking).</li>
+                                <li><strong>flex-basis</strong>: Specifies the initial size of an item before space is
+                                    distributed.</li>
+                                <li class="no-margin-bottom"><strong>align-self</strong>: Overrides
+                                    <code>align-items</code> for a specific item.
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+            <section id="grid-layout">
+                <h2>Grid Layout</h2>
+                <div class="section-content">
+                    <p>CSS Grid is a powerful tool for creating two-dimensional layouts. It allows you to define rows
+                        and
+                        columns with ease.</p>
+                    <p>Basic properties include:</p>
+                    <ul>
+                        <li><strong>display</strong>: Set to <code>grid</code>.</li>
+                        <li><strong>grid-template-rows</strong>: Defines the row structure.</li>
+                        <li><strong>grid-template-columns</strong>: Defines the column structure.</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="positioning">
+                <h2>CSS Positioning</h2>
+                <div class="section-content">
+                    <p>CSS positioning determines how elements are placed in the document flow and how they relate to
+                        other elements or the viewport.</p>
+                    <p>The positioning is controlled using the <code>position</code>
+                        property with several values, each serving specific use cases:
+                    </p>
+                    <ul>
+                        <li><strong>Static (default)</strong>: The default value for all elements. Elements are placed
+                            according to the normal HTML document flow. Top, right, bottom, and left properties have no
+                            effect.
+                        </li>
+                        <li><strong>Relative</strong>: Positions the element relative to its normal static position,
+                            while not affecting the position of neighboring elements. Moves the element based on the
+                            top, right, bottom, or left properties.
+                        </li>
+                        <li><strong>Absolute</strong>: Removes the element from the normal document flow, and positions
+                            it relative to its closest positioned (non-static) ancestor or the viewport if no ancestor
+                            is positioned. Other elements act as if it doesn’t exist.
+                        </li>
+                        <li><strong>Fixed</strong>: Positions the element relative to the viewport, and stays fixed in
+                            the same spot even during scrolling. It's commonly used for sticky headers or footers.
+                        </li>
+                        <li><strong>Sticky</strong>: A hybrid of <code>relative</code> and <code>fixed</code>. The
+                            element is treated as relative until a specified scroll position is reached, after which it
+                            behaves like fixed. Requires a defined scroll container (e.g., overflow: auto on a parent).
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="animations">
+                <h2>Animations</h2>
+                <div class="section-content">
+                    <p>CSS animations bring life to web pages by allowing elements to transition between states over
+                        time.
+                    </p>
+                    <p>Key properties include:</p>
+                    <ul>
+                        <li><strong>@keyframes</strong>: Defines the animation steps.</li>
+                        <li><strong>animation-name</strong>: Specifies the keyframe.</li>
+                        <li><strong>animation-duration</strong>: Duration of the animation.</li>
+                        <li><strong>animation-delay</strong>: Defines a delay before the animation starts.</li>
+                        <li><strong>animation-iteration-count</strong>: Specifies how many times an animation will run.
+                        </li>
+                        <li><strong>animation-timing-function</strong>: Controls the speed curve of an animation (e.g.,
+                            ease, linear, ease-in-out).</li>
+                    </ul>
+                    <p>For example, an animation is defined like that:</p>
+                    <pre>
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}                   </pre>
+                    <p>And used like that:</p>
+                    <pre>
+div {
+    animation-name: slideIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}                   </pre>
+                </div>
+            </section>
+            <section id="media-queries">
+                <h2>Media Queries</h2>
+                <div class="section-content">
+                    <p>Media queries allow developers to apply CSS based on the device's screen size or other
+                        characteristics.</p>
+                    <p>Example:</p>
+                    <pre>
+@media (max-width: 600px) {
+    body {
+        background-color: lightgray;
+    }
+}                   </pre>
+                    <p>They can be combined to handle different scenarios using the <code>and</code> and <code>or</code>
+                        keywords:</p>
+                    <pre>
+@media (min-width: 600px) and (max-width: 1200px) {
+    body {
+        background-color: lightblue;
+    }
+}                   </pre>
+                </div>
+            </section>
+            <footer>
+                <p>For more details, visit <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                        target="_blank">MDN Web Docs</a>.
+                </p>
+                <p>&copy; 2024 CSS Docs by Baraa El Hajj</p>
+            </footer>
+        </main>
+    </div>
+</body>
+
+</html>
