@@ -225,6 +225,7 @@ section:nth-child(even) {
 
 .subscribe button:hover {
     background: #f9f9f9;
+    background: #203b84;
 }
 
 /* Footer */
