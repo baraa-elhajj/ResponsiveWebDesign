@@ -1,3 +1,10 @@
+/* Media Queries */
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
+
 /* Variables */
 :root {
     --darkblue: #0b1e52;
@@ -17,11 +24,6 @@ body {
     line-height: 1.6;
     color: var(--darkblue);
     padding-top: 60px;
-}
-
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
 }
 
 /* Header */
@@ -213,7 +215,7 @@ section:nth-child(even) {
     width: 300px;
 }
 
-.subscribe button {
+.subscribe input[type="submit"] {
     padding: 10px 20px;
     border: none;
     background: var(--darkblue);
@@ -223,8 +225,7 @@ section:nth-child(even) {
     cursor: pointer;
 }
 
-.subscribe button:hover {
-    background: #f9f9f9;
+.subscribe input[type="submit"]:hover {
     background: #203b84;
 }
 
