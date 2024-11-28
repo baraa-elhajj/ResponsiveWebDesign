@@ -15,7 +15,7 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--main-font-color);
-    background: #f4f4f9;
+    background: white;
 }
 
 /* Header */
@@ -45,13 +45,10 @@ body {
     color: var(--header-font-color);
     font-weight: bold;
     transition: color 0.3s ease-in-out;
-    /* padding: 0.2em; */
 }
 
 .nav-links a:hover {
     color: var(--hover-color);
-    /* background-color: #333; */
-    /* border-radius: 5px; */
 }
 
 .fade-in {
@@ -62,6 +59,21 @@ body {
 /* Main Sections */
 .section {
     padding: 3rem 1rem;
+    text-align: center;
+}
+
+section:nth-child(odd) {
+    background-color: var(--header-font-color);
+}
+
+/* About */
+.about-section h2 {
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    width: 35%;
+    margin: 0 auto;
     text-align: center;
 }
 
