@@ -4,20 +4,24 @@
     padding: 0;
     box-sizing: border-box;
     --main-theme-color: linear-gradient(to right, #6a11cb, #2575fc);
+    --secondary-theme-color: #2575fc;
+    --hover-color: #ffcc00;
+    --header-font-color: #f4f4f9;
+    --main-font-color: #333;
 }
 
 /* Body and Font Settings */
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: var(--main-font-color);
     background: #f4f4f9;
 }
 
 /* Header */
 .header {
     background: var(--main-theme-color);
-    color: white;
+    color: var(--header-font-color);
     text-align: center;
     padding: 5rem 1rem;
     position: relative;
@@ -38,14 +42,14 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: white;
+    color: var(--header-font-color);
     font-weight: bold;
     transition: color 0.3s ease-in-out;
     /* padding: 0.2em; */
 }
 
 .nav-links a:hover {
-    color: #ffcc00;
+    color: var(--hover-color);
     /* background-color: #333; */
     /* border-radius: 5px; */
 }
@@ -69,8 +73,8 @@ body {
 }
 
 .portfolio-item {
-    background: #2575fc;
-    color: white;
+    background: var(--secondary-theme-color);
+    color: var(--header-font-color);
     padding: 2rem;
     border-radius: 5px;
     transition: transform 0.3s ease-in-out;
@@ -83,8 +87,8 @@ body {
 /* Button */
 .button {
     display: inline-block;
-    background: #2575fc;
-    color: white;
+    background: var(--secondary-theme-color);
+    color: var(--header-font-color);
     padding: 0.7rem 2rem;
     border-radius: 5px;
     text-decoration: none;
@@ -93,15 +97,15 @@ body {
 }
 
 .button:hover {
-    background: #ffcc00;
-    color: #333;
+    background: var(--hover-color);
+    color: var(--main-font-color);
 }
 
 /* Footer */
 footer {
     text-align: center;
-    background: #333;
-    color: white;
+    background: var(--main-font-color);
+    color: var(--header-font-color);
     padding: 1rem 0;
     margin-top: 2rem;
 }
