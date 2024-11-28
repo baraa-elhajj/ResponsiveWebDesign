@@ -1,0 +1,135 @@
+/* General Settings*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --main-theme-color: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+/* Body and Font Settings */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f9;
+}
+
+/* Header */
+.header {
+    background: var(--main-theme-color);
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    /* padding: 0.2em; */
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+    /* background-color: #333; */
+    /* border-radius: 5px; */
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 3s alternate infinite;
+}
+
+/* Main Sections */
+.section {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+#portfolio .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.portfolio-item {
+    background: #2575fc;
+    color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+/* Button */
+.button {
+    display: inline-block;
+    background: #2575fc;
+    color: white;
+    padding: 0.7rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.button:hover {
+    background: #ffcc00;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .header {
+        padding: 3rem 1rem;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
