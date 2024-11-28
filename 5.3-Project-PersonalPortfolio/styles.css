@@ -96,6 +96,38 @@ section:nth-child(odd) {
     transform: scale(1.05);
 }
 
+/* Download Resume */
+.resume-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.resume-section h2 {
+    margin-bottom: 1rem;
+}
+
+.resume-section p {
+    width: 35%;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+}
+
+.resume-section .btn {
+    padding: 0.8rem 1.5rem;
+    background: var(--secondary-theme-color);
+    color: var(--header-font-color);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.resume-section .btn:hover {
+    background: var(--hover-color);
+    color: var(--main-font-color);
+}
+
+
 /* Button */
 .button {
     display: inline-block;
