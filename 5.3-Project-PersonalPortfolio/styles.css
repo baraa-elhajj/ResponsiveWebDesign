@@ -15,7 +15,7 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--main-font-color);
-    background: white;
+    background: var(--header-font-color);
 }
 
 /* Header */
@@ -63,7 +63,7 @@ body {
 }
 
 section:nth-child(odd) {
-    background-color: var(--header-font-color);
+    background-color: white;
 }
 
 /* About Section*/
@@ -77,10 +77,60 @@ section:nth-child(odd) {
     text-align: center;
 }
 
-/* Projects Section */
-#portfolio .portfolio-grid {
+/* Skills Section */
+.skills-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.skills-section h2 {
+    margin-bottom: 1rem;
+}
+
+.skills-section p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.skill {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.skill h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+
+
+/* Projects Section */
+#projects .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 300px));
+    justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
 }
