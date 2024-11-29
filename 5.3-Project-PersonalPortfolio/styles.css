@@ -53,7 +53,7 @@ body {
 
 .fade-in {
     opacity: 0;
-    animation: fadeIn 3s alternate infinite;
+    animation: fadeIn 2.5s alternate infinite;
 }
 
 /* Main Sections */
@@ -74,7 +74,6 @@ section:nth-child(odd) {
 .about-section p {
     width: 35%;
     margin: 0 auto;
-    text-align: center;
 }
 
 /* Skills Section */
@@ -111,7 +110,7 @@ section:nth-child(odd) {
 }
 
 /* Projects Section */
-#projects .portfolio-grid {
+.projects-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(200px, 300px));
     justify-content: center;
@@ -119,7 +118,7 @@ section:nth-child(odd) {
     margin-top: 1rem;
 }
 
-.portfolio-item {
+.projects-item {
     background: var(--secondary-theme-color);
     color: var(--header-font-color);
     padding: 2rem;
@@ -127,14 +126,13 @@ section:nth-child(odd) {
     transition: transform 0.3s ease-in-out;
 }
 
-.portfolio-item:hover {
+.projects-item:hover {
     transform: scale(1.05);
 }
 
 /* Download Resume Section */
 .resume-section {
     padding: 4rem 2rem;
-    text-align: center;
 }
 
 .resume-section h2 {
@@ -144,7 +142,6 @@ section:nth-child(odd) {
 .resume-section p {
     width: 35%;
     margin: 0 auto 2rem auto;
-    text-align: center;
 }
 
 .resume-section .btn {
@@ -178,6 +175,7 @@ section:nth-child(odd) {
 .social-links {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 1.5rem;
     margin-top: 2rem;
 }
@@ -208,8 +206,7 @@ footer {
     text-align: center;
     background: var(--main-font-color);
     color: var(--header-font-color);
-    padding: 1rem 0;
-    margin-top: 2rem;
+    padding: 1.1rem 0;
 }
 
 /* Media Queries */
