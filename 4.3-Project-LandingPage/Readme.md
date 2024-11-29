@@ -1,4 +1,4 @@
 
 # Certification Project: Landing Page
 
-Built a E-learning Platform landing page.
+Built an E-learning Platform landing page. Dived more in advanced concepts including flexbox, z-index, transitions, etc.
