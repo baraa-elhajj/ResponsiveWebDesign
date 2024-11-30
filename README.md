@@ -1,4 +1,4 @@
 
 # ResponsiveWebDesign
 
-Learning on FreeCodeCamp - Stage 1: RWD
+FreeCodeCamp Core Curriculum - Stage 1: RWD
